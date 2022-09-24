@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(210, 74%, 98%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 67%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+.hidden{
+    display: none;
+}
+html,
+body {
+    width: 100%;    
+    height: 100%;
+}
+
+body {
+    min-height: 990px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--very-light-grayish-blue);
+}
+/* CONTAINER */
+.container {
+    margin-top: 10rem;
+    width: 100%;
+    max-width: 1440px;
+    height: 990px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+/* SECTION */
+.section{
+    width: 95%;
+    max-width: 732px;
+    min-height: 841px;
+    margin-bottom: 1.626rem;
+    padding: 2.15rem 1.9rem 0 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.06);
+    background-color: var(--white);
+    
+}
+
+/* HEADER */
+.section-header{
+    width: 100%;
+    margin-bottom: 1.8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-header1{
+    margin-right: .7rem;
+    margin-left: .1rem;
+    font-size: 1.48rem;
+    font-weight: 700;
+    letter-spacing: .015rem;
+}
+
+.section-header2{
+    width: 2rem;
+    height: 1.56rem;
+    padding-bottom: .15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.section-mark-all{
+    margin-left: auto;
+    margin-right: .05rem;
+    letter-spacing: .005rem;
+    color: var(--dark-grayish-blue);
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+/* CARDS */
+.card{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .875rem;
+    margin-bottom: .5rem;
+    border-radius: .375rem;
+    transition: all .8s ease-in-out;
+}
+.card-bg{
+    background-color: var(--very-light-grayish-blue);
+}
+.card-img{
+    padding-right: .9375rem;
+    align-self: center;
+}
+.card-person{
+    margin-top: -0.3125rem;
+}
+.img{
+    width: 2.8125rem;
+    height: 2.8125rem;
+    align-self: center;
+}
+.card-name{
+    color: var(--very-dark-blue);
+    font-size: 1rem;
+}
+.card-post-info{
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+    font-weight: 200;
+}
+.card-post{
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+
+}
+.card-point{
+    color: hsl(1, 90%, 64%);
+    font-size: 1rem;
+}
+.card-time{
+    color: var(--grayish-blue);
+    font-size: 1rem;
+}
+.card-comment{
+    width: 100%;
+    max-width: 560px;
+    margin-top: .75rem;
+    margin-bottom: .35rem;
+    padding: 1rem 1.2rem;
+    color: var(--dark-grayish-blue);
+    border: 1px solid var(--light-grayish-blue-2);
+    border-radius: 4px;
+    letter-spacing: 0.006rem;
+    transition: all .25s ease-in-out;
+}
+.card-little-img{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.15rem;
+    cursor: pointer;
+}
+/* Hovers */
+.section-mark-all:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+.card-name:hover{
+    color: var(--blue);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.card-post:hover{
+    color: var(--blue);
+    font-size: 1rem;
+    cursor: pointer;
+}
+.card-comment:hover{
+    background-color:  var(--light-grayish-blue-2)
+}
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        height: 100%;
+    }    
+    
+    .section {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 3rem 1rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.06);
+        background-color: var(--white);
+    }
+
+    .section-header1 {
+        margin-right: .25rem;
+        font-size: 1rem;
+    }
+
+    .section-header2 {
+        transform: scale(.75);
+    }
+
+    .section-mark-all {
+        font-size: .85rem;
+    }
+
+    .img {
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .card-comment {
+        padding: 0.8rem;
+        font-size: .7rem;
+    }
+
+}
